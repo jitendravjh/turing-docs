@@ -528,8 +528,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 Iterations        = 1:1:1000
 Number of chains  = 1
 Samples per chain = 1000
-Wall duration     = 8.6 seconds
-Compute duration  = 8.6 seconds
+Wall duration     = 8.7 seconds
+Compute duration  = 8.7 seconds
 parameters        = s², m
 internals         = lp
 
@@ -537,16 +537,16 @@ Summary Statistics
   parameters      mean       std      mcse   ess_bulk   ess_tail      rhat   e ⋯
       Symbol   Float64   Float64   Float64    Float64    Float64   Float64     ⋯
 
-          s²    1.7741    1.2728    0.0878   236.3312   346.4869    1.0133     ⋯
-           m    1.1387    0.7353    0.0660   130.9804   165.2486    1.0076     ⋯
+          s²    2.1132    1.8708    0.1926   146.6053   122.2813    1.0012     ⋯
+           m    1.0301    0.8368    0.1076    79.7301    49.1186    1.0149     ⋯
                                                                 1 column omitted
 
 Quantiles
   parameters      2.5%     25.0%     50.0%     75.0%     97.5%
       Symbol   Float64   Float64   Float64   Float64   Float64
 
-          s²    0.5728    1.0094    1.4348    2.1102    5.2535
-           m   -0.1923    0.6177    1.0946    1.5796    2.7154</code></pre>
+          s²    0.5725    1.0249    1.5442    2.4136    7.1396
+           m   -1.1269    0.6543    1.0875    1.5105    2.4787</code></pre>
 </div>
 </div>
 <p>Generally, reverse-mode AD, for instance <code>ReverseDiff</code>, is faster when sampling from variables of high dimensionality (greater than 20), while forward-mode AD, for instance <code>ForwardDiff</code>, is more efficient for lower-dimension variables. This functionality allows those who are performance sensitive to fine tune their automatic differentiation for their specific models.</p>
