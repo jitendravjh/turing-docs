@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.45">
+<meta name="generator" content="quarto-1.5.52">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -432,12 +432,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../versions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Versions</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../versions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Versions</span></a>
+  <a href="../../changelog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Changelog</span></a>
   </div>
 </li>
+      </ul>
+  </li>
       </ul>
   </li>
     </ul>
@@ -497,33 +508,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>dynamic_nuts <span class="op">=</span> <span class="fu">externalsampler</span>(DynamicHMC.<span class="fu">NUTS</span>())</span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>chn <span class="op">=</span> <span class="fu">sample</span>(<span class="fu">gdemo</span>(<span class="fl">1.5</span>, <span class="fl">2.0</span>), dynamic_nuts, <span class="fl">2000</span>, progress<span class="op">=</span><span class="cn">false</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="1">
-<div class="ansi-escaped-output">
-<pre>Chains MCMC chain (2000×3×1 Array{Float64, 3}):
+<pre><code>Chains MCMC chain (2000×3×1 Array{Float64, 3}):
 
 Iterations        = 1:1:2000
 Number of chains  = 1
 Samples per chain = 2000
-Wall duration     = 7.15 seconds
-Compute duration  = 7.15 seconds
+Wall duration     = 7.07 seconds
+Compute duration  = 7.07 seconds
 parameters        = s², m
 internals         = lp
 
 Summary Statistics
- <span class="ansi-bold"> parameters </span> <span class="ansi-bold">    mean </span> <span class="ansi-bold">     std </span> <span class="ansi-bold">    mcse </span> <span class="ansi-bold">  ess_bulk </span> <span class="ansi-bold"> ess_tail </span> <span class="ansi-bold">    rhat </span> <span class="ansi-bold"> </span> ⋯
- <span class="ansi-bright-black-fg">     Symbol </span> <span class="ansi-bright-black-fg"> Float64 </span> <span class="ansi-bright-black-fg"> Float64 </span> <span class="ansi-bright-black-fg"> Float64 </span> <span class="ansi-bright-black-fg">   Float64 </span> <span class="ansi-bright-black-fg">  Float64 </span> <span class="ansi-bright-black-fg"> Float64 </span> <span class="ansi-bright-black-fg"> </span> ⋯
+  parameters      mean       std      mcse   ess_bulk    ess_tail      rhat    ⋯
+      Symbol   Float64   Float64   Float64    Float64     Float64   Float64    ⋯
 
-          s²    2.0393    1.6178    0.0532   1108.1150   997.3217    1.0003    ⋯
-           m    1.2121    0.8255    0.0274    956.3593   647.2986    1.0001    ⋯
-<span class="ansi-cyan-fg">                                                                1 column omitted</span>
+          s²    1.9975    1.5945    0.0553   967.8378   1039.7598    1.0005    ⋯
+           m    1.1762    0.8007    0.0273   892.3658    765.9756    0.9998    ⋯
+                                                                1 column omitted
 
 Quantiles
- <span class="ansi-bold"> parameters </span> <span class="ansi-bold">    2.5% </span> <span class="ansi-bold">   25.0% </span> <span class="ansi-bold">   50.0% </span> <span class="ansi-bold">   75.0% </span> <span class="ansi-bold">   97.5% </span>
- <span class="ansi-bright-black-fg">     Symbol </span> <span class="ansi-bright-black-fg"> Float64 </span> <span class="ansi-bright-black-fg"> Float64 </span> <span class="ansi-bright-black-fg"> Float64 </span> <span class="ansi-bright-black-fg"> Float64 </span> <span class="ansi-bright-black-fg"> Float64 </span>
+  parameters      2.5%     25.0%     50.0%     75.0%     97.5%
+      Symbol   Float64   Float64   Float64   Float64   Float64
 
-          s²    0.5667    1.0525    1.5787    2.4080    6.3992
-           m   -0.3517    0.7020    1.2055    1.7336    2.8348
-</pre>
-</div>
+          s²    0.5646    1.0429    1.5120    2.4160    6.2981
+           m   -0.4910    0.7092    1.1916    1.6844    2.6246</code></pre>
 </div>
 </div>
 
