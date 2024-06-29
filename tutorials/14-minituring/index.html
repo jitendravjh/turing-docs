@@ -740,16 +740,16 @@ Summary Statistics
   parameters      mean       std      mcse      ess_bulk      ess_tail      rh ⋯
       Symbol   Float64   Float64   Float64       Float64       Float64   Float ⋯
 
-           a    0.9735    0.9038    0.0032    80882.0316   124070.5504    1.00 ⋯
-           b    2.8825    0.4882    0.0012   173392.9073   213975.4196    1.00 ⋯
+           a    0.9768    0.8970    0.0031    82911.5892   121173.1329    1.00 ⋯
+           b    2.8801    0.4886    0.0012   172770.6238   212526.2786    1.00 ⋯
                                                                2 columns omitted
 
 Quantiles
   parameters      2.5%     25.0%     50.0%     75.0%     97.5%
       Symbol   Float64   Float64   Float64   Float64   Float64
 
-           a   -0.8007    0.3651    0.9732    1.5819    2.7431
-           b    1.9247    2.5531    2.8817    3.2117    3.8402</code></pre>
+           a   -0.7752    0.3716    0.9748    1.5797    2.7430
+           b    1.9238    2.5502    2.8803    3.2086    3.8381</code></pre>
 </div>
 </div>
 <p>We compare these results with Turing.</p>
@@ -771,8 +771,8 @@ Quantiles
 Iterations        = 1:1:1000000
 Number of chains  = 1
 Samples per chain = 1000000
-Wall duration     = 40.79 seconds
-Compute duration  = 40.79 seconds
+Wall duration     = 42.0 seconds
+Compute duration  = 42.0 seconds
 parameters        = a, b
 internals         = lp
 
@@ -780,16 +780,16 @@ Summary Statistics
   parameters      mean       std      mcse      ess_bulk      ess_tail      rh ⋯
       Symbol   Float64   Float64   Float64       Float64       Float64   Float ⋯
 
-           a    0.9770    0.8964    0.0031    82529.8595   120487.8181    1.00 ⋯
-           b    2.8825    0.4877    0.0012   170693.2341   211781.2616    1.00 ⋯
+           a    0.9738    0.8988    0.0031    82012.2270   122386.7698    1.00 ⋯
+           b    2.8781    0.4868    0.0012   174689.9024   219473.5185    1.00 ⋯
                                                                2 columns omitted
 
 Quantiles
   parameters      2.5%     25.0%     50.0%     75.0%     97.5%
       Symbol   Float64   Float64   Float64   Float64   Float64
 
-           a   -0.7812    0.3731    0.9763    1.5816    2.7368
-           b    1.9262    2.5544    2.8839    3.2122    3.8369</code></pre>
+           a   -0.7853    0.3693    0.9728    1.5813    2.7363
+           b    1.9270    2.5499    2.8792    3.2067    3.8314</code></pre>
 </div>
 </div>
 <p>As you can see, with our simple probabilistic programming language and custom samplers we get similar results as Turing.</p>
