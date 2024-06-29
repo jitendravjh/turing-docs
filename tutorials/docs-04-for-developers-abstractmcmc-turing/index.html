@@ -552,29 +552,29 @@ window.Quarto = {
 <div class="cell-output cell-output-display" data-execution_count="1">
 <pre><code>Chains MCMC chain (1000×3×1 Array{Float64, 3}):
 
-Log evidence      = -3.7376722886896703
+Log evidence      = -3.7320013956645237
 Iterations        = 1:1:1000
 Number of chains  = 1
 Samples per chain = 1000
-Wall duration     = 2.24 seconds
-Compute duration  = 2.24 seconds
+Wall duration     = 2.28 seconds
+Compute duration  = 2.28 seconds
 parameters        = s², m
 internals         = lp
 
 Summary Statistics
-  parameters      mean       std      mcse   ess_bulk   ess_tail      rhat   e ⋯
-      Symbol   Float64   Float64   Float64    Float64    Float64   Float64     ⋯
+  parameters      mean       std      mcse    ess_bulk   ess_tail      rhat    ⋯
+      Symbol   Float64   Float64   Float64     Float64    Float64   Float64    ⋯
 
-          s²    2.9294    4.2251    0.1434   874.8296   914.1091    1.0023     ⋯
-           m    0.0099    1.6230    0.0515   973.4033   905.3280    1.0007     ⋯
+          s²    2.8663    3.8500    0.1253   1013.2017   940.7185    1.0006    ⋯
+           m   -0.0206    1.7486    0.0581    958.9009   904.9495    0.9997    ⋯
                                                                 1 column omitted
 
 Quantiles
   parameters      2.5%     25.0%     50.0%     75.0%     97.5%
       Symbol   Float64   Float64   Float64   Float64   Float64
 
-          s²    0.5391    1.0854    1.8037    3.2878   12.2256
-           m   -3.0431   -0.8889   -0.0097    0.8883    3.2761</code></pre>
+          s²    0.5274    1.0660    1.7362    3.0505   12.5594
+           m   -3.4071   -0.9744   -0.0130    0.8990    3.4129</code></pre>
 </div>
 </div>
 <p>The function <code>sample</code> is part of the AbstractMCMC interface. As explained in the <a href="https://turinglang.org/dev/docs/for-developers/interface">interface guide</a>, building a sampling method that can be used by <code>sample</code> consists in overloading the structs and functions in <code>AbstractMCMC</code>. The interface guide also gives a standalone example of their implementation, <a href=""><code>AdvancedMH.jl</code></a>.</p>
@@ -607,7 +607,7 @@ w_i = \frac {p(x,y,s_i,m_i)} {p(s_i, m_i)} = p(x,y \mid s_i, m_i)
 <div class="cell-output cell-output-display" data-execution_count="1">
 <pre><code>Chains MCMC chain (1000×3×1 Array{Float64, 3}):
 
-Log evidence      = -3.7313356157194604
+Log evidence      = -3.715203023483225
 Iterations        = 1:1:1000
 Number of chains  = 1
 Samples per chain = 1000
@@ -617,19 +617,19 @@ parameters        = s², m
 internals         = lp
 
 Summary Statistics
-  parameters      mean       std      mcse    ess_bulk   ess_tail      rhat    ⋯
-      Symbol   Float64   Float64   Float64     Float64    Float64   Float64    ⋯
+  parameters      mean       std      mcse    ess_bulk    ess_tail      rhat   ⋯
+      Symbol   Float64   Float64   Float64     Float64     Float64   Float64   ⋯
 
-          s²    2.9143    5.6538    0.1786    961.0741   936.7700    1.0027    ⋯
-           m   -0.0441    1.7349    0.0527   1070.6481   910.3263    1.0002    ⋯
+          s²    2.9027    3.7030    0.1164   1023.0305   1025.7469    1.0003   ⋯
+           m   -0.0464    1.6570    0.0524   1017.2991    943.0320    0.9991   ⋯
                                                                 1 column omitted
 
 Quantiles
   parameters      2.5%     25.0%     50.0%     75.0%     97.5%
       Symbol   Float64   Float64   Float64   Float64   Float64
 
-          s²    0.5068    1.0924    1.8243    2.9565   11.2142
-           m   -3.2619   -0.9618   -0.0318    0.9374    3.1851</code></pre>
+          s²    0.5517    1.1407    1.8769    3.2894   10.5925
+           m   -3.4275   -1.0148   -0.0171    0.9403    3.0243</code></pre>
 </div>
 </div>
 <p>Here <code>sample</code> takes as arguments a <strong>model</strong> <code>mod</code>, an <strong>algorithm</strong> <code>alg</code>, and a <strong>number of samples</strong> <code>n_samples</code>, and returns an instance <code>chn</code> of <code>Chains</code> which can be analysed using the functions in <code>MCMCChains</code>.</p>
